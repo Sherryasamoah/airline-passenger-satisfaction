@@ -31,7 +31,7 @@ Preparing the data for high-performance classification models:
     
 **Data Integrity Check**: Crucially, steps were taken to prevent data leakage, ensuring the predictive model was trained without access to the target variable's numerical representation, leading to a valid and generalizable result.
     
-## ** Model Training and Evaluation **
+## Model Training and Evaluation 
    Multiple classification algorithms were tested (including Decision Tree and XGBoost) before selecting the optimal ensemble method.
     
  **Model**: Tuned Random Forest Classifier.
@@ -46,17 +46,17 @@ Preparing the data for high-performance classification models:
 Feature importance analysis identified the factors most strongly correlated with positive and negative satisfaction:
     
 Top 3 Drivers of Satisfaction (Highest ROI)
-Seat Comfort: The foundational physical experience remains a top predictor of overall contentment
-Inflight Entertainment: The quality of the digital experience on board is a major factor, particularly when ratings reach 4 or 5.
-Ease of Online Booking: The pre-flight digital experience is nearly as critical as the in-flight service, underscoring the necessity of a seamless UI/UX.
+**Seat Comfort**: The foundational physical experience remains a top predictor of overall contentment
+**Inflight Entertainment**: The quality of the digital experience on board is a major factor, particularly when ratings reach 4 or 5.
+**Ease of Online Booking**: The pre-flight digital experience is nearly as critical as the in-flight service, underscoring the necessity of a seamless UI/UX.
     
 Primary Dissatisfiers (Risk Factors)
-Operational Delay: The duration of the Departure Delay is a direct and quantifiable source of negative sentiment, confirming that timely operation is key to mitigating dissatisfaction
-Loyalty Risk: Disloyal Customers are highly likely to report dissatisfaction, confirming that targeted service recovery efforts should be focused on new or non-frequent travelers.
+**Operational Delay**: The duration of the Departure Delay is a direct and quantifiable source of negative sentiment, confirming that timely operation is key to mitigating dissatisfaction
+**Loyalty Risk**: Disloyal Customers are highly likely to report dissatisfaction, confirming that targeted service recovery efforts should be focused on new or non-frequent travelers.
     
     
     
-   ##  **💻 Technical Stack and Setup**
+   ##  💻 Technical Stack and Setup
     
 This project requires a Python environment with the following libraries:bash
    
@@ -64,7 +64,7 @@ This project requires a Python environment with the following libraries:bash
 import pandas as pdimport numpy as np
     
  **Visualization**
-   import seaborn as snsimport matplotlib.pyplot as plt
+import seaborn as snsimport matplotlib.pyplot as plt
     
 **Machine Learning and Preprocessing**
     from sklearn.model_selection import train_test_split
