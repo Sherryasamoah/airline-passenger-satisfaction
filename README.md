@@ -20,15 +20,18 @@ The project followed a standard machine learning pipeline:
    **Operational Friction**: Visualized via stacked histograms, confirming that Departure Delay in Minutes directly and negatively correlates with satisfaction, causing a proportional rise in the "Neutral or Dissatisfied" segment as delay time increases.
    **Service Thresholds**: Identified that service ratings must maintain a minimum score of 3/5 to avoid dissatisfaction, with ratings of 4 or 5 providing a disproportionate boost to satisfaction (non-linear effect).
   
- ## **2. Data Preprocessing & Feature Engineering**
-    Preparing the data for high-performance classification models:
+ ## ** Data Preprocessing & Feature Engineering**
+Preparing the data for high-performance classification models:
     
-    **Missing Value Imputation**: Handled missing values (primarily in Arrival Delay in Minutes) using Median Imputation, a robust method suitable for skewed delay distributions.
-    **Encoding**: Applied One-Hot Encoding to nominal categorical features (Gender, Type of Travel) to prevent the model from misinterpreting them as ordinal.
-   ** Scaling**: Applied StandardScaler to continuous numerical features (Age, Flight Distance, Delays) to normalize their scale and ensure equal contribution during modeling.
-    **Data Integrity Check**: Crucially, steps were taken to prevent data leakage, ensuring the predictive model was trained without access to the target variable's numerical representation, leading to a valid and generalizable result.
+**Missing Value Imputation**: Handled missing values (primarily in Arrival Delay in Minutes) using Median Imputation, a robust method suitable for skewed delay distributions.
     
-   ** Model Training and Evaluation **
+**Encoding**: Applied One-Hot Encoding to nominal categorical features (Gender, Type of Travel) to prevent the model from misinterpreting them as ordinal.
+   
+**Scaling**: Applied StandardScaler to continuous numerical features (Age, Flight Distance, Delays) to normalize their scale and ensure equal contribution during modeling.
+    
+**Data Integrity Check**: Crucially, steps were taken to prevent data leakage, ensuring the predictive model was trained without access to the target variable's numerical representation, leading to a valid and generalizable result.
+    
+## ** Model Training and Evaluation **
     Multiple classification algorithms were tested (including Decision Tree and XGBoost) before selecting the optimal ensemble method.
     
     **Model**: Tuned Random Forest Classifier.
@@ -40,16 +43,16 @@ The project followed a standard machine learning pipeline:
     Tuned Random Forest   60.9473 
     
  ## **  🌟 Key Findings & Actionable Insights**
-    Feature importance analysis identified the factors most strongly correlated with positive and negative satisfaction:
+Feature importance analysis identified the factors most strongly correlated with positive and negative satisfaction:
     
-    Top 3 Drivers of Satisfaction (Highest ROI)
-    Seat Comfort: The foundational physical experience remains a top predictor of overall contentment
-    Inflight Entertainment: The quality of the digital experience on board is a major factor, particularly when ratings reach 4 or 5.
-    Ease of Online Booking: The pre-flight digital experience is nearly as critical as the in-flight service, underscoring the necessity of a seamless UI/UX.
+Top 3 Drivers of Satisfaction (Highest ROI)
+Seat Comfort: The foundational physical experience remains a top predictor of overall contentment
+Inflight Entertainment: The quality of the digital experience on board is a major factor, particularly when ratings reach 4 or 5.
+Ease of Online Booking: The pre-flight digital experience is nearly as critical as the in-flight service, underscoring the necessity of a seamless UI/UX.
     
-    Primary Dissatisfiers (Risk Factors)
-    Operational Delay: The duration of the Departure Delay is a direct and quantifiable source of negative sentiment, confirming that timely operation is key to mitigating dissatisfaction
-    Loyalty Risk: Disloyal Customers are highly likely to report dissatisfaction, confirming that targeted service recovery efforts should be focused on new or non-frequent travelers.
+Primary Dissatisfiers (Risk Factors)
+Operational Delay: The duration of the Departure Delay is a direct and quantifiable source of negative sentiment, confirming that timely operation is key to mitigating dissatisfaction
+Loyalty Risk: Disloyal Customers are highly likely to report dissatisfaction, confirming that targeted service recovery efforts should be focused on new or non-frequent travelers.
     
     
     
