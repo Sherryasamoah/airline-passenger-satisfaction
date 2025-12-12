@@ -4,7 +4,7 @@
 This project aims to develop a robust machine learning model to accurately predict airline passenger satisfaction and, crucially, to identify the specific service and operational factors that have the greatest influence (both positive and negative) on the overall passenger experience.
 The ultimate goal is to provide the airline with actionable, data-driven insights to prioritize service improvements, enhance customer loyalty, and ultimately drive revenue growth in a competitive market.
 
-## 📊** Dataset**
+## 📊 Dataset
 The analysis is based on the Kaggle Airline Passenger Satisfaction Dataset, a comprehensive survey containing over 100,000 entries. 
 The dataset includes:
 1. Target Variable: Satisfaction (Binary: Satisfied vs. Neutral/Dissatisfied)
@@ -12,7 +12,7 @@ The dataset includes:
 3. Continuous Variables: Age, Flight Distance, Departure Delay in Minutes, and Arrival Delay in Minutes.
 4. Nominal/Categorical Variables: Customer Type, Type of Travel, Gender, and Class.
 
-## ⚙️ **Methodology and Workflow**
+## ⚙️ Methodology and Workflow
 The project followed a standard machine learning pipeline:
 **1. Exploratory Data Analysis (EDA)**
    Initial analysis focused on visualizing feature distributions and direct relationships with the target variable using Seaborn.
@@ -20,7 +20,7 @@ The project followed a standard machine learning pipeline:
    **Operational Friction**: Visualized via stacked histograms, confirming that Departure Delay in Minutes directly and negatively correlates with satisfaction, causing a proportional rise in the "Neutral or Dissatisfied" segment as delay time increases.
    **Service Thresholds**: Identified that service ratings must maintain a minimum score of 3/5 to avoid dissatisfaction, with ratings of 4 or 5 providing a disproportionate boost to satisfaction (non-linear effect).
   
- ## ** Data Preprocessing & Feature Engineering**
+ ##  Data Preprocessing & Feature Engineering
 Preparing the data for high-performance classification models:
     
 **Missing Value Imputation**: Handled missing values (primarily in Arrival Delay in Minutes) using Median Imputation, a robust method suitable for skewed delay distributions.
@@ -32,17 +32,17 @@ Preparing the data for high-performance classification models:
 **Data Integrity Check**: Crucially, steps were taken to prevent data leakage, ensuring the predictive model was trained without access to the target variable's numerical representation, leading to a valid and generalizable result.
     
 ## ** Model Training and Evaluation **
-    Multiple classification algorithms were tested (including Decision Tree and XGBoost) before selecting the optimal ensemble method.
+   Multiple classification algorithms were tested (including Decision Tree and XGBoost) before selecting the optimal ensemble method.
     
-    **Model**: Tuned Random Forest Classifier.
-    **Hyperparameter Tuning**: Employed techniques to optimize parameters like n_estimators and max_depth to prevent overfitting.
-    **Performance**: The Random Forest model demonstrated the highest predictive capability on the unseen test set, confirming its reliability as an operational tool.
+ **Model**: Tuned Random Forest Classifier.
+ **Hyperparameter Tuning**: Employed techniques to optimize parameters like n_estimators and max_depth to prevent overfitting.
+ **Performance**: The Random Forest model demonstrated the highest predictive capability on the unseen test set, confirming its reliability as an operational tool.
     
     **Model Accuracy**
     F1 Score    0.9425
     Tuned Random Forest   60.9473 
     
- ## **  🌟 Key Findings & Actionable Insights**
+ ##  🌟 Key Findings & Actionable Insights
 Feature importance analysis identified the factors most strongly correlated with positive and negative satisfaction:
     
 Top 3 Drivers of Satisfaction (Highest ROI)
@@ -58,15 +58,15 @@ Loyalty Risk: Disloyal Customers are highly likely to report dissatisfaction, co
     
    ##  **💻 Technical Stack and Setup**
     
-    This project requires a Python environment with the following libraries:bash
+This project requires a Python environment with the following libraries:bash
    
-    **Core Data Analysis and Manipulation**
-    import pandas as pdimport numpy as np
+**Core Data Analysis and Manipulation**
+import pandas as pdimport numpy as np
     
-    **Visualization**
-    import seaborn as snsimport matplotlib.pyplot as plt
+ **Visualization**
+   import seaborn as snsimport matplotlib.pyplot as plt
     
-   ** Machine Learning and Preprocessing**
+**Machine Learning and Preprocessing**
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import StandardScaler, LabelEncoder
     from sklearn.ensemble import RandomForestClassifier
